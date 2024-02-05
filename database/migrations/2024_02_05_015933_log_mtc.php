@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('log_mtc', function (Blueprint $table) {
+            $table->id();
+            $table->string('kd_it', 10);
+            $table->date('tgl');
+            $table->string('pic', 10);
+            $table->text('kondisi');
+            $table->timestamps();
+
+            $table->foreign('kd_it')->references('kd_it')->on('assetit');
+        });
     }
 
     /**
@@ -19,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('log_mtc');
     }
 };
