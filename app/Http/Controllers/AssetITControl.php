@@ -52,7 +52,6 @@ class AssetITControl extends Controller
     // ini fungsi update foto
     public function store(Request $request)
     {
-        
         //upload file baru ke folder img
         $image = $request->file('image');
         $destinationPath = 'img/';

@@ -152,7 +152,7 @@
                         </div>
                         
                         <div class="modal-body">
-                            <form action="/store" method="post">
+                            <form action="{{ route('create') }}" method="post">
                                 @csrf
                                 @method('POST')
                                 <div class="form-group">
@@ -187,7 +187,7 @@
             </div>
             
             <!-- Data Log Mtc -->
-            <table class="table table-responsive border">
+            <table class="table border">
                 <tr>
                     <th>No</th>
                     <th>Tanggal</th>
