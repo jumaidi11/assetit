@@ -12,13 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('assetit', function (Blueprint $table) {
-            $table->id();
-            $table->morphs('tokenable');
-            $table->string('name');
-            $table->string('token', 64)->unique();
-            $table->text('abilities')->nullable();
-            $table->timestamp('last_used_at')->nullable();
-            $table->timestamp('expires_at')->nullable();
+            $table->string('kd_it', 10)->primary();
+            $table->string('kd_asset', 10)->nullable();
+            $table->string('dept', 20);
+            $table->string('jenis', 20);
+            $table->string('pic', 30)->nullable();
+            $table->text('merek',)->nullable();
+            $table->text('model',)->nullable();
+            $table->year('tahun_beli')->nullable();
             $table->timestamps();
         });
     }
