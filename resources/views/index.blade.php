@@ -20,7 +20,7 @@
             <td>{{ $asset->jenis }}</td>
             <td>{{ $asset->dept }}</td>
             <td>{{ $asset->pic }}</td>
-            <td></td>
+            <td><a href="{{ route('log.index', ['kd_it' => $asset->kd_it]) }}" class="btn btn-primary">History Pengguna</a></td>
         </tr>
         @endforeach
     </table>

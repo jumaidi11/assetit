@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AssetITControl;
+use App\Http\Controllers\LogPemakaiControl;
 use App\Models\assetit;
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::post('/loghapus', [AssetITControl::class, 'destroy'])->name('destroy');
 Route::post('/logedit', [AssetITControl::class, 'edit'])->name('edit');
 Route::post('/store', [AssetITControl::class, 'store'])->name('store');
 Route::post('/delete', [AssetITControl::class, 'delete'])->name('delete');
+
+Route::get('/log.index/{kd_it}', [LogPemakaiControl::class, 'index'])->name('log.index');
