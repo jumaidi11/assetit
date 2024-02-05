@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('img_assetit', function (Blueprint $table) {
             $table->id();
-            $table->string('assetit.kd_it', 10);
+            $table->string('kd_it', 10);
             $table->string('url', 255);
             $table->timestamps();
 
-            $table->foreign('assetit.kd_it')->references('kd_it')->on('assetit');
+            $table->foreign('kd_it')->references('kd_it')->on('assetit');
         });
     }
 
