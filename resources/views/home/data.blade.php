@@ -69,7 +69,9 @@
     <div class="rows">
         <div class="col-12 border">
             <!-- data asset -->
-            <h2 class="ms-3 mt-2 float-left">Asset</h2>
+            <h2 class="ms-3 mt-2 float-left">
+                {{ config('app.name', 'Laravel') }}
+            </h2>
             <!-- tampilkan button pilihan user -->
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
