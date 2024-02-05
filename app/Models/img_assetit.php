@@ -10,4 +10,5 @@ class img_assetit extends Model
     use HasFactory;
 
     protected $table = 'img_assetit';
+    protected $fillable = ['id', 'kd_it', 'url'];
 }

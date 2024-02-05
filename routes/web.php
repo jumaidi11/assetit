@@ -17,7 +17,7 @@ use App\Models\assetit;
 Route::get('/', function () {
     $assetit = assetit::latest()->paginate(100);
     return view('index', ['assetit' => $assetit]);
-});
+})->name('index.home');
 
 Auth::routes();
 

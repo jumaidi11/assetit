@@ -10,4 +10,5 @@ class log_mtc extends Model
     use HasFactory;
 
     protected $table = 'log_mtc';
+    protected $fillable = ['id', 'kd_it', 'tgl', 'pic', 'kondisi'];
 }
