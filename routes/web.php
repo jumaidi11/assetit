@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AssetITControl;
 use App\Models\assetit;
 /*
 |--------------------------------------------------------------------------
@@ -22,4 +23,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/{kd_it}', [App\Http\Controllers\AssetITControl::class, 'index'])->name('index');
+Route::get('/{kd_it}', [AssetITControl::class, 'index'])->name('index');
+Route::post('/loginput', [AssetITControl::class, 'create'])->name('create');
+Route::post('/loghapus', [AssetITControl::class, 'destroy'])->name('destroy');
+Route::post('/logedit', [AssetITControl::class, 'edit'])->name('edit');
+Route::post('/store', [AssetITControl::class, 'store'])->name('store');
+Route::post('/delete', [AssetITControl::class, 'delete'])->name('delete');

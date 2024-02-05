@@ -8,15 +8,16 @@
         <tr>
             <th>No</th>
             <th>Kode IT</th>
+            <th>PC/NB</th>
             <th>Dept</th>
             <th>PIC</th>
-            <th>Serah Terima/Awal Pemakaian</th>
             <th>Aksi</th>
         </tr>
         @foreach($assetit as $asset)
         <tr>
             <td>{{ $loop->iteration }}</td>
-            <td>{{ $asset->kd_it }}</td>
+            <td><a href="/{{ $asset->kd_it }}">{{ $asset->kd_it }}</a></td>
+            <td>{{ $asset->jenis }}</td>
             <td>{{ $asset->dept }}</td>
             <td>{{ $asset->pic }}</td>
             <td></td>
