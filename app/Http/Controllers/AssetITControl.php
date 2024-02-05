@@ -13,6 +13,6 @@ class AssetITControl extends Controller
         $data = assetit::where("kd_it", $kd_it)->first();
         $img_assetit = img_assetit::where("kd_it", $kd_it)->get();
         $log_mtc = log_mtc::where("kd_it", $kd_it)->get();
-        return view('home.data', ['data' => $data, 'img_assetit' => $img_assetit]);
+        return view('home.data', ['data' => $data, 'img_assetit' => $img_assetit, 'log_mtc' => $log_mtc]);
     }
 }
