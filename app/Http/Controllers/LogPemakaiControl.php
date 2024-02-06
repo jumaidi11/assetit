@@ -38,4 +38,19 @@ class LogPemakaiControl extends Controller
         ]);
         return redirect()->route('index.home');
     }
+    public function create($kd_it) {
+        $assetit = assetit::where('kd_it', $kd_it)->get();
+        return view('log_use.tambah', ['assetit' => $assetit]);
+    }
+    public function insert($kd_it, Request $request){
+        $logUser = log_pemakai::create([
+            'kd_it' => $request->kd_it,
+            'dept' => $request->dept,
+            'pic' => $request->pic,
+            'tgl_awal' => $request->tgl_awal,
+            'tgl_akhir' => $request->tgl_awal,
+            'kondisi' => $request->kondisi
+        ]);
+        return redirect()->route('index.home');
+    }
 }

@@ -34,3 +34,5 @@ Route::post('/delete', [AssetITControl::class, 'delete'])->name('delete');
 Route::get('/log.index/{kd_it}', [LogPemakaiControl::class, 'index'])->name('log.index');
 Route::get('/log.update/{kd_it}', [LogPemakaiControl::class, 'update'])->name('log.update');
 Route::post('/log.store/{kd_it}', [LogPemakaiControl::class, 'store'])->name('log.store');
+Route::get('/log.create/{kd_it}', [LogPemakaiControl::class, 'create'])->name('log.create');
+Route::post('/log.insert/{kd_it}', [LogPemakaiControl::class, 'insert'])->name('log.insert');

@@ -5,9 +5,7 @@
 @section('content')
 <section class="container">
     <a href="{{ route('index.home') }}" class="btn btn-primary">Kembali</a>
-    @auth
-    
-    @endauth
+    <section class="table-responsive">
     <table class="table">
         <tr>
             <th>No</th>
@@ -30,5 +28,6 @@
         </tr>
         @endforeach
     </table>
+    </section>
 </section>
 @endsection
