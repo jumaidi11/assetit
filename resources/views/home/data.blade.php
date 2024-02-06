@@ -15,7 +15,7 @@
                     <!-- foto asset yang pertama -->
                     @if($key == 0)
                     <div class="carousel-item active">
-                        <img class="d-block w-100 img-responsive" style="height: 200px; width: 100%;" src="img/{{ $img->url }}">
+                        <img class="d-block w-100 img-responsive" style="height: 300px; width: 100%;" src="img/{{ $img->url }}">
                         <center>
                         @auth
                         <form method="post" action="{{ route('delete') }}">
@@ -29,7 +29,7 @@
                     <!-- foto asset yang kedua dan seterusnya -->
                     @elseif($key > 0)
                     <div class="carousel-item">
-                        <img class="d-block" style="height:200px; width: 100%;" src="img/{{ $img->url }}">
+                        <img class="d-block" style="height:300px; width: 100%;" src="img/{{ $img->url }}">
                         <center>
                         <!-- pengecekan authentikasi user -->
                         @auth

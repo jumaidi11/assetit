@@ -16,7 +16,7 @@
         @foreach($assetit as $asset)
         <tr>
             <td>{{ $loop->iteration }}</td>
-            <td><a href="/{{ $asset->kd_it }}">{{ $asset->kd_it }}</a></td>
+            <td><a href="{{ route('index', ['kd_it' => $asset->kd_it]) }}">{{ $asset->kd_it }}</a></td>
             <td>{{ $asset->jenis }}</td>
             <td>{{ $asset->dept }}</td>
             <td>{{ $asset->pic }}</td>

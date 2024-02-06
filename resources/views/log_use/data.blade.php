@@ -4,7 +4,7 @@
 
 @section('content')
 <section class="container">
-    <a href="/" class="btn btn-primary">Kembali</a>
+    <a href="{{ route('index.home') }}" class="btn btn-primary">Kembali</a>
     @auth
     
     @endauth
