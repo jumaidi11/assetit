@@ -16,7 +16,7 @@ use App\Models\assetit;
 */
 
 Route::get('/', function () {
-    $assetit = assetit::latest()->paginate(100);
+    $assetit = assetit::where('jenis', 'PC')->orderBy('kd_it')->get();
     return view('index', ['assetit' => $assetit]);
 })->name('index.home');
 
