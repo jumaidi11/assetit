@@ -8,14 +8,18 @@ use App\Models\img_assetit;
 use App\Models\log_mtc;
 use Redirect;
 use File;
+use Carbon\Carbon;
 
 class AssetITControl extends Controller
 {
     public function index($kd_it){
         $data = assetit::where("kd_it", $kd_it)->first();
+        $tahun_beli = $data->tahun_beli;
+        $tanggal = Carbon::parse($tahun_beli . '-01-01');
+        $usia = $tanggal->diffInYears(Carbon::now());
         $img_assetit = img_assetit::where("kd_it", $kd_it)->get();
         $log_mtc = log_mtc::where("kd_it", $kd_it)->get();
-        return view('home.data', ['data' => $data, 'img_assetit' => $img_assetit, 'log_mtc' => $log_mtc]);
+        return view('home.data', ['data' => $data, 'img_assetit' => $img_assetit, 'log_mtc' => $log_mtc, 'usia' => $usia]);
     }
     //ini fungsi create log
     public function create(Request $request){

@@ -126,6 +126,11 @@
                     <td>Purchased On (Year)</td>
                     <td>:</td>
                     <td>{{ $data->tahun_beli }}</td>
+                </tr>
+                <tr>
+                    <td>Usia Perangkat</td>
+                    <td>:</td>
+                    <td>{{ $usia }} Tahun</td>
                 </tr>             
             </table>
         </div>
