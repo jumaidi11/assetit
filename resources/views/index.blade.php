@@ -16,6 +16,7 @@
             <th>Merek</th>
             <th>Model</th>
             <th>Tahun Beli</th>
+            <th>Umur</th>
             <th colspan="3" class="text-center">Aksi</th>
         </tr>
         @foreach($assetit as $asset)
@@ -29,6 +30,7 @@
             <td>{{ $asset->merek }}</td>
             <td>{{ $asset->model }}</td>
             <td>{{ $asset->tahun_beli }}</td>
+            <td>{{ $asset->umur }}</td>
             <td><a href="{{ route('log.index', ['kd_it' => $asset->kd_it]) }}" class="btn btn-primary">History</a></td>
             @auth
             <td><a href="{{ route('log.create', ['kd_it' => $asset->kd_it]) }}" class="btn btn-primary">Insert</a></td>

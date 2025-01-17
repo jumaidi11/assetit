@@ -18,6 +18,11 @@ use Carbon\Carbon;
 
 Route::get('/', function () {
     $assetit = assetit::whereIn('jenis', ['PC', 'NB'])->orderByRaw("FIELD(jenis, 'PC', 'NB')")->orderBy('kd_it')->get();
+    // Tambahkan umur perangkat pada setiap record
+    $assetit->each(function ($asset) {
+        // Menghitung umur perangkat
+        $asset->umur = now()->year - $asset->tahun_beli;
+    });
     return view('index', ['assetit' => $assetit]);
 })->name('index.home');
 
