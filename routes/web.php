@@ -17,7 +17,7 @@ use Carbon\Carbon;
 */
 
 Route::get('/', function () {
-    $assetit = assetit::where('jenis', 'PC')->orderBy('kd_it')->get();
+    $assetit = assetit::whereIn('jenis', ['PC', 'NB'])->orderByRaw("FIELD(jenis, 'PC', 'NB')")->orderBy('kd_it')->get();
     return view('index', ['assetit' => $assetit]);
 })->name('index.home');
 
