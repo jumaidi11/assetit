@@ -12,6 +12,7 @@
             <th>Kode IT</th>
             <th>Dept</th>
             <th>PIC</th>
+            <th>Lokasi</th>
             <th>Tgl Awal</th>
             <th>Tgl Akhir</th>
             <th>Kondisi</th>
@@ -22,6 +23,7 @@
             <td>{{ $log->kd_it }}</td>
             <td>{{ $log->dept }}</td>
             <td>{{ $log->pic }}</td>
+            <td>{{ $log->location }}</td>
             <td>{{ $log->tgl_awal }}</td>
             <td>{{ $log->tgl_akhir }}</td>
             <td>{{ $log->kondisi }}</td>

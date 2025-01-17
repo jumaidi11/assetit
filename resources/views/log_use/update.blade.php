@@ -33,6 +33,10 @@
             <input type="date" required="required" name="tgl_awal" class="form-control" value="{{ $log->tgl_awal }}" />   
         </div>
         @endforeach
+        <div class="form-group">
+            <label for="location">Lokasi</label>
+            <input type="text" required="required" name="location" class="form-control" value="{{ $log->location }}" />
+        </div>
     </div>
     <div class="col-6">
         <div class="form-group">
@@ -52,6 +56,10 @@
         <div class="form-group">
             <label for="model">Model</label>
             <textarea name="model" required="required" class="form-control bg-secondary" readonly>{{ $asset->model }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="ipaddress">IP Address</label>
+            <input type="text" required="required" name="ipaddress" class="form-control bg-secondary" value="{{ $asset->ipaddress }}" readonly />
         </div>
         @foreach($log_user as $log)
         <div class="form-group">

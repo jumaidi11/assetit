@@ -22,16 +22,20 @@ class LogPemakaiControl extends Controller
             'pic' => 'required',
             'dept' => 'required',
             'kd_it' => 'required',
+            'ipaddress' => 'required',
+            'location' => 'required',
             'tgl_awal' => 'required'
         ]);
         $asset = assetit::where('kd_it', $request->kd_it);
-        $asset = $asset->update(['pic'=>$request->pic, 'dept'=>$request->dept]);
+        $asset = $asset->update(['pic'=>$request->pic, 'dept'=>$request->dept, 'ipaddress'=>$request->ipaddress, 'location'=>$request->location]);
         $logLama = log_pemakai::where("kd_it", $request->kd_it)->latest()->limit(1);
         $logLama = $logLama->update(['tgl_akhir'=>$request->tgl_awal]);
         $logBaru = log_pemakai::create([
             'kd_it' => $request->kd_it,
             'dept' => $request->dept,
             'pic' => $request->pic,
+            'ipaddress' => $request->ipaddress,
+            'location' => $request->location,
             'tgl_awal' => $request->tgl_awal,
             'tgl_akhir' => $request->tgl_awal,
             'kondisi' => $request->kondisi
@@ -47,6 +51,8 @@ class LogPemakaiControl extends Controller
             'kd_it' => $request->kd_it,
             'dept' => $request->dept,
             'pic' => $request->pic,
+            'ipaddress' => $request->ipaddress,
+            'location' => $request->location,
             'tgl_awal' => $request->tgl_awal,
             'tgl_akhir' => $request->tgl_awal,
             'kondisi' => $request->kondisi

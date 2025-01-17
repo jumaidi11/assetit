@@ -131,7 +131,17 @@
                     <td>Usia Perangkat</td>
                     <td>:</td>
                     <td>{{ $usia }} Tahun</td>
+                </tr>
+                <tr>
+                    <td>IP Address</td>
+                    <td>:</td>
+                    <td>{{ $data->ipaddress }}</td>
                 </tr>             
+                <tr>
+                    <td>Lokasi</td>
+                    <td>:</td>
+                    <td>{{ $data->location }}</td>
+                </tr>
             </table>
         </div>
     </div>

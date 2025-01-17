@@ -20,6 +20,8 @@ return new class extends Migration
             $table->text('merek',)->nullable();
             $table->text('model',)->nullable();
             $table->year('tahun_beli')->nullable();
+            $table->text('ipaddress')->nullable();
+            $table->text('location')->nullable();
             $table->timestamps();
         });
     }

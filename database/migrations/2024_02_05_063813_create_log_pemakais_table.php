@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('kd_it', 10);
             $table->string('dept', 20);
             $table->string('pic', 30);
+            $table->text('location');
             $table->date('tgl_awal');
             $table->date('tgl_akhir');
             $table->text('kondisi');

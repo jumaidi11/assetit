@@ -31,6 +31,10 @@
             <label for="tgl_awal">Tanggal Awal</label>
             <input type="date" required="required" name="tgl_awal" class="form-control" />   
         </div>
+        <div class="form-group">
+            <label for="location">Lokasi</label>
+            <input type="text" required="required" name="location" class="form-control"  />
+        </div>
     </div>
     <div class="col-6">
         <div class="form-group">
@@ -50,6 +54,10 @@
         <div class="form-group">
             <label for="model">Model</label>
             <textarea name="model" required="required" class="form-control bg-secondary" readonly >{{ $asset->model }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="ipaddress">Ip Address</label>
+            <input type="text" required="required" name="ipaddress" class="form-control bg-secondary" value="{{ $asset->ipaddress }}" readonly />
         </div>
         <div class="form-group">
             <label for="kondisi">Kondisi</label>
